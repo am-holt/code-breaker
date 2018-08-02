@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import {words} from './words.js';
 
 const MAIN_MODE = "main";
 const TEAM_MODE = "team";
@@ -77,27 +78,3 @@ Array.prototype.randomSelection = function(sizeOfSelection) {
 
 export default App;
 
-
-//============================
-
-const words = [
-	"Cheese",
-	"Beef",
-	"Karate",
-	"Greek",
-	"Olive",
-	"Pirate",
-	"Dice",
-	"Ninja",
-	"Punk",
-	"Guitar",
-	"Laptop",
-	"Website",
-	"Monkey",
-	"Viking",
-	"Summer",
-	"Chess",
-	"Duck",
-	"Pencil",
-	"Anchovy",
-];
