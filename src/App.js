@@ -41,22 +41,29 @@ class TeamView extends Component {
    	
     return (
       <div className="TeamWords">
-        <p> {randWords[0]} </p>
-        <p> {randWords[1]} </p>
-        <p> {randWords[2]} </p>
-        <p> {randWords[3]} </p>
+        <h1> 1. {randWords[0]} </h1>
+        <h1> 2. {randWords[1]} </h1>
+        <h1> 3. {randWords[2]} </h1>
+        <h1> 4. {randWords[3]} </h1>
       </div>
     );
   }
 }
 
 class CodeView extends Component {
+	constructor(props){
+		super(props);
+		this.state = {
+			code  : [1,2,3,4].randomSelection(3),
+		}
+	}
+
    render() {
-   	const code = [1,2,3,4].randomSelection(3);
+   	const code = this.state.code;
     return (
       <div className="CodemasterView">
-        <p> {code[0]} {code[1]} {code[2]} </p>
-        <button onClick={() => alert("todo")}> Next Code </button>
+        <h1> {code[0]} {code[1]} {code[2]} </h1>
+        <button onClick={() => this.setState({code  : [1,2,3,4].randomSelection(3)})}> Next Code </button>
       </div>
     );
   }
